@@ -2,15 +2,22 @@ require 'faker'
 
 
 
-
 puts `clear`
-puts "Suppression de la base de données en cours..."
+puts "    ################################################################"
+puts "    ######## ~ L'ancienne base de donnée va être supprimée~ ########"
+puts ""
+puts "    ----------------------------------------------------------------"
 
 Patient.destroy_all
 Doctor.destroy_all
 Appointment.destroy_all
 
-puts "Ecriture de la base de données..."
+puts `clear`
+puts "    ################################################################"
+puts "    ########      ~ Ecriture de la base de données ~      ########"
+puts ""
+puts "    ----------------------------------------------------------------"
+puts 
 sleep(2)
 
 10.times do |index|
@@ -27,3 +34,10 @@ end
 	appointment = Appointment.create!(date: Time.now, patient_id: 1, doctor_id: 1)
 	puts "Appointment : #{appointment.date}"
 end 
+
+
+puts ""
+puts ""
+puts "              ############🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 ###########"
+puts "              ####### ~ Merci pour ta patience ! ~ ###########"
+puts "              ############🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 🥰 ###########"
